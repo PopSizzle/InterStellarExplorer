@@ -1,19 +1,20 @@
 $(function() {
     $(".change-status").on("click", function(event) {
+        // console.log("Status Change");
         let id = $(this).data("id");
-        let isDiscovered = $(this).data("isDiscovered");
 
         let newDiscoveryState = {
-            explored: isDiscovered
+            explored: 1
         };
 
-        // Send the PUT reques
+        // console.log(newDiscoveryState);
+        // Send the PUT request
         $.ajax("/api/planets/" + id, {
             type: "PUT",
             data: newDiscoveryState
         }).then(
             function() {
-                console.log("changed planet to", isDiscovered);
+                console.log("changed planet to explored");
 
                 // Reload the page
                 location.reload();

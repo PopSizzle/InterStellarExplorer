@@ -29,7 +29,7 @@ router.post("/api/planets", function(req, res) {
     });
 });
 
-router.put("/api/cats/:id", function(req, res) {
+router.put("/api/planets/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
     console.log("condition", condition);
@@ -47,7 +47,7 @@ router.put("/api/cats/:id", function(req, res) {
   });
   
 
-router.delete("/api/cats/:id", function(req, res) {
+router.delete("/api/planets/:id", function(req, res) {
     let condition = "id = " + req.params.id;
 
     planet.delete(condition, function(result) {
