@@ -12,7 +12,7 @@ else {
     user: "root",
     password: "password",
     database: "explorer_db"
-});
+})};
 
 // Initiate Connection
 connection.connect(function(err) {
