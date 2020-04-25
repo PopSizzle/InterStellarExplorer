@@ -32,7 +32,7 @@ router.post("/api/planets", function(req, res) {
 router.delete("/api/cats/:id", function(req, res) {
     let condition = "id = " + req.params.id;
 
-    planet.delete(condtion, function(result) {
+    planet.delete(condition, function(result) {
         if (result.affected == 0) {
             // If no rows changed, send a 404 error.
             return res.status(404).end();
