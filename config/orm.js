@@ -1,5 +1,5 @@
 // Import connection
-var connection = require("../connection.js");
+var connection = require("./connection.js");
 
 // Question mark function for SQL strings
 function printQuestionMarks(num) {

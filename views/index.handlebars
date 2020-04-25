@@ -1,0 +1,45 @@
+<h1>Interstellar Explorer</h1>
+
+<h2>Planets waiting to be explored!</h2>
+
+<ul>
+  {{#each planets}}
+    {{#unless explored}}
+      {{> planet-block unexplored=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Planets that are already explored!</h2>
+
+<ul>
+  {{#each planets}}
+    {{#if explored}}
+      {{> planet-block unexplored=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Planet</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="plan">Planet Name:</label>
+    <input type="text" id="plan" name="name">
+
+    <label for="size">Planet Size (in earth's masses)</label>
+    <input type="text" id="size" name="mass">
+
+    <label for="color">Planet Color</label>
+    <input type="text" id="color" name="col">
+
+  </div>
+
+  <div class="form-group">
+    <label for="sleepy">Is this planet a Gas Giant or a Terrestrial (rocky) planet?</label><br>
+    <input type="radio" name="gas" value="1" checked>Gas Giant<br>
+    <input type="radio" name="gas" value="0"> Terrestrial
+  </div>
+
+  <button type="submit">Add Planet</button>
+</form>

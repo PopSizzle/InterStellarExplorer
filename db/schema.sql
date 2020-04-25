@@ -8,5 +8,6 @@ CREATE TABLE planets
     size DEC (10,3) NOT NULL,
     gas BOOLEAN DEFAULT false,
     color VARCHAR (30),
+    explored BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );
