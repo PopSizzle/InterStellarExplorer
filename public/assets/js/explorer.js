@@ -13,7 +13,7 @@ $(function() {
             data: newDiscoveryState
         }).then(
             function() {
-                console.log("changed sleep to", isDiscovered);
+                console.log("changed planet to", isDiscovered);
 
                 // Reload the page
                 location.reload();
@@ -29,7 +29,7 @@ $(function() {
             size: $("#size").val().trim(),
             color: $("#color").val().trim(),
             gas: $("[name=gas]:checked").val().trim(),
-            explored: false
+            explored: 0
         };
 
         // Send the POST request

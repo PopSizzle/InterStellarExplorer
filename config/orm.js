@@ -9,7 +9,7 @@ function printQuestionMarks(num) {
         arr.push("?");
     }
 
-    return arr.tostring();
+    return arr.toString();
 }
 
 // Convert key value pairs to SQL
