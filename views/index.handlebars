@@ -1,8 +1,12 @@
 <h1>Interstellar Explorer</h1>
+<p>
+  Welcome explorer! You are about to embark on a mission to explore new planets across the galaxy. Once you have explored the planets in our solar system, you may add new planets to explore. As you are the first human to ever venture this far, you may name the planets whatever you wish!
+</p>
 
-<h2>Planets waiting to be explored!</h2>
 
-<ul>
+
+<ul id="unexList">
+  <h2>Planets waiting to be explored!</h2>
   {{#each planets}}
     {{#unless explored}}
       {{> planet-block unexplored=true}}
@@ -10,9 +14,10 @@
   {{/each}}
 </ul>
 
-<h2>Planets that are already explored!</h2>
 
-<ul>
+
+<ul id="exList">
+  <h2>Planets that are already explored!</h2>
   {{#each planets}}
     {{#if explored}}
       {{> planet-block unexplored=false}}
@@ -20,8 +25,9 @@
   {{/each}}
 </ul>
 
-<h2>Add a Planet</h2>
+
 <form class="create-form">
+  <h3>Add a Planet</h3>
 
   <div class="form-group">
     <label for="plan">Planet Name:</label>
