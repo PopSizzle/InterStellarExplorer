@@ -1,4 +1,4 @@
-# Live App Deployed at: https://shrouded-cove-50672.herokuapp.com/
+# Live App Deployed at: https://exploretheplanets.herokuapp.com/
 
 # Interstellar Explorer
 
